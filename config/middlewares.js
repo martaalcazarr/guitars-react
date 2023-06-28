@@ -27,5 +27,13 @@ module.exports = [
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
-  'strapi::public',
+  {
+    name: 'strapi::public',
+    config: {
+      // Agrega las extensiones de archivo permitidas y sus MIME types correspondientes
+      // Ejemplo para archivos SVG
+      extensions: ['svg'],
+      mimeTypes: ['image/svg+xml'],
+    },
+  },
 ];
